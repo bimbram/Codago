@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <% include partials/head %>
+  <body>
+      <% include partials/header %>
+      <div class=container>
+    <form class="" action="" method="post">
+
+
+      <div class="form-group">
+      ID<br>
+      <input class="form-control" type="text" name="id" value="<%= data.id %>" readonly>
+      </div>
+
+
+
+      <div class="form-group">
+        <br>String<br>
+      <input class="form-control" type="text" name="string" value="<%= data.string %>">
+    </div>
+
+      <div class="form-group">
+      <br>Integer<br>
+      <input class="form-control" type="number" name="integer" value="<%= data.integer %>">
+  </div>
+
+    <div class="form-group">
+      <br>Float<br>
+      <input class="form-control" type="number" name="float" step="0.01" value="<%= data.float %>">
+</div>
+
+  <div class="form-group">
+      <br>Date<br>
+      <input class="form-control" name= "date" type="date" value="<%=data.date %>">
+</div>
+
+      <br>Boolean<br>
+      <select class="form-control" name="bool">
+        <option value="True" <%= data.bool === true ? ' selected' : '' %> >True</option>
+        <option value="False" <%= data.bool  === false ? ' selected' : '' %> >False</option>
+      </select>
+      <br><br>
+      <button class="btn btn-primary" type="submit" name="button">Update</button>
+
+    </form>
+  </div>
+<% include partials/footer %>
